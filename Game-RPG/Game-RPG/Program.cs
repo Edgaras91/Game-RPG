@@ -2,27 +2,46 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Game_RPG
 {
     class Program
+
     {
-        static void Main()
+
+
+
+
+
+
+        static public void Main()
         {
+
+
             Console.WriteLine("Welcome, please type in your hero name:");
+
             string heroName = Console.ReadLine();
+            
+            Console.Clear();
             Console.WriteLine("Allright, " + heroName + " it is then.");
-            Console.WriteLine("Now please type your class from the following: ");
+            Thread.Sleep(2000);
+
+
+
+
+            classSelect:
+            Console.WriteLine("Please type your class from the following: ");
             Console.WriteLine("Warrior / Ranger");
+            Thread.Sleep(2000);
 
             string heroClassCheck = Console.ReadLine().ToUpper();
+            Console.Clear();
+            
 
-           
-            string warrior = "WARRIOR";
-            string ranger = "RANGER";
 
-            if (heroClassCheck == warrior)
+            if (heroClassCheck == "WARRIOR")
             {
                 Console.WriteLine("Warrior - Can withstand a punch");
                 Hero hero = new Hero();
@@ -32,8 +51,12 @@ namespace Game_RPG
                 hero.attack = 2;
                 hero.exp = 1;
 
+                Inventory inv = new Inventory();
+                inv.smallPotions = 2;
+
+
             }
-            else if (heroClassCheck == ranger)
+            else if (heroClassCheck == "RANGER")
             {
                 Console.WriteLine("Ranger - Stealthy and deadly!");
             }
@@ -42,11 +65,15 @@ namespace Game_RPG
             else
             {
                 Console.WriteLine("Ups, that class was invalid.");
-                
+                goto classSelect;
+
+
             }
 
 
+
             Console.ReadLine();
+
         }
     }
 }
