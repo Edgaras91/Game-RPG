@@ -10,7 +10,13 @@ namespace Game_RPG
     class Program
 
     {
+        static void Help()
+        {
+            Console.WriteLine("Following commands are available:");
+            Console.WriteLine("/stats");
 
+
+        }
 
 
 
@@ -19,12 +25,25 @@ namespace Game_RPG
         static public void Main()
         {
 
-
+            Start:
             Console.WriteLine("Welcome, please type in your hero name:");
-
             string heroName = Console.ReadLine();
+            Console.WriteLine("Are you sure?");
+            string confirm = Console.ReadLine().ToUpper();
+            if ( confirm == "NO")
+            {
+                Console.Clear();
+                goto Start;
+            }
+            else if (confirm == "N")
+            {
+                Console.Clear();
+                goto Start;
+
+            }
             
-            Console.Clear();
+
+                Console.Clear();
             Console.WriteLine("Allright, " + heroName + " it is then.");
             Thread.Sleep(2000);
 
@@ -34,7 +53,7 @@ namespace Game_RPG
             classSelect:
             Console.WriteLine("Please type your class from the following: ");
             Console.WriteLine("Warrior / Ranger");
-            Thread.Sleep(2000);
+            
 
             string heroClassCheck = Console.ReadLine().ToUpper();
             Console.Clear();
@@ -59,6 +78,13 @@ namespace Game_RPG
             else if (heroClassCheck == "RANGER")
             {
                 Console.WriteLine("Ranger - Stealthy and deadly!");
+                Hero hero = new Hero();
+                hero.name = heroName;
+                hero.maxHealth = 5;
+                hero.currentHealth = 5;
+                hero.attack = 7;
+                hero.level = 1;
+                hero.exp = 1;
             }
 
 
@@ -69,6 +95,10 @@ namespace Game_RPG
 
 
             }
+
+
+
+            //Hero hero = hero.GetStats;
 
 
 
