@@ -69,6 +69,8 @@ namespace Game_RPG
                 hero.currentHealth = 10;
                 hero.attack = 2;
                 hero.exp = 1;
+                hero.level = 1;
+                hero.GetStats();
 
                 Inventory inv = new Inventory();
                 inv.smallPotions = 2;
@@ -85,6 +87,8 @@ namespace Game_RPG
                 hero.attack = 7;
                 hero.level = 1;
                 hero.exp = 1;
+                hero.GetStats();
+                
             }
 
 
@@ -92,13 +96,52 @@ namespace Game_RPG
             {
                 Console.WriteLine("Ups, that class was invalid.");
                 goto classSelect;
+                
+                
 
 
             }
 
+            Console.WriteLine("You wake up, poor, broke, hungry, and you can hear someone calling your name, " + heroName + "...");
+            FleeOrAttackOne:
+            Console.WriteLine("Before you can react, you are being attacked by a mosquito.");
+            Console.WriteLine("You need to make a choice: Flee or Attack?");
+            string fleeAttack = Console.ReadLine().ToUpper();
+            Console.Clear();
 
 
-            //Hero hero = hero.GetStats;
+
+            if (fleeAttack == "FLEE")
+            {
+                Console.WriteLine("You ran like a little.... Hero.");
+            }
+            else if (fleeAttack == "ATTACK")
+            {
+                Console.WriteLine("You attacked like a brave beaver");
+
+                Mosquito mosquito = new Mosquito();
+                mosquito.name = "George";
+                mosquito.maxHealth = 2;
+                mosquito.currentHealth = 1;
+                mosquito.attack = 0.1;
+                mosquito.exp = 10;
+                mosquito.level = 1;
+                mosquito.GetStats();
+
+            }
+            else
+            {
+                goto FleeOrAttackOne;
+            }
+
+
+
+
+
+
+
+
+
 
 
 

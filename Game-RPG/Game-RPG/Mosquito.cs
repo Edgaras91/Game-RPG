@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Game_RPG
 {
-    class Hero
+    class Mosquito
     {
         public string name;
         public int maxHealth;
         public int currentHealth;
-        public int attack;
+        public double attack;
         public int level;
         public int exp;
 
@@ -28,11 +28,8 @@ namespace Game_RPG
             Console.WriteLine("Hero health: " + currentHealth + "/" + maxHealth);
             Thread.Sleep(500);
             Console.WriteLine("Hero attack: " + attack);
-          
+
 
         }
-
-
-
     }
 }
