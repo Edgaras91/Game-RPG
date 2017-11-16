@@ -63,14 +63,14 @@ namespace Game_RPG
             if (heroClassCheck == "WARRIOR")
             {
                 Console.WriteLine("Warrior - Can withstand a punch");
-                Hero hero = new Hero();
+                
                 hero.name = heroName;
                 hero.maxHealth = 10;
                 hero.currentHealth = 10;
                 hero.attack = 2;
                 hero.exp = 1;
                 hero.level = 1;
-                hero.GetStats();
+                hero.AnnounceAllStats();
 
                 Inventory inv = new Inventory();
                 inv.smallPotions = 2;
@@ -80,14 +80,14 @@ namespace Game_RPG
             else if (heroClassCheck == "RANGER")
             {
                 Console.WriteLine("Ranger - Stealthy and deadly!");
-                Hero hero = new Hero();
+                
                 hero.name = heroName;
                 hero.maxHealth = 5;
                 hero.currentHealth = 5;
                 hero.attack = 7;
                 hero.level = 1;
                 hero.exp = 1;
-                hero.GetStats();
+                hero.AnnounceAllStats();
                 
             }
 
