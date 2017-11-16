@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_RPG
 {
-    class Hero
+    class static Hero
     {
         public string name;
         public int maxHealth;
@@ -15,8 +15,13 @@ namespace Game_RPG
         public int attack;
         public int level;
         public int exp;
+        
+        
+        public void AnnounceStats (all, name, level, exp, currentHealth, maxHealth, attack)
+        
+        
 
-        public void GetStats()
+        public void AnnounceAllStats()
         {
             Thread.Sleep(1000);
             Console.WriteLine("Hero name: " + name);
