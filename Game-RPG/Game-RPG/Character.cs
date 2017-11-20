@@ -16,11 +16,19 @@ namespace Game_RPG
         public int attack;
         public int level;
         public int exp;
-        
-        
-        
-        
-        
+
+
+        public int AttackAction()
+        {
+
+            Random rnd = new Random();
+
+            int Dice = rnd.Next(0, attack);
+            return Dice;
+        }
+
+
+
 
         public void AnnounceAllStats()
         {

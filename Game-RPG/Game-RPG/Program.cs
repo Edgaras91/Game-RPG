@@ -13,6 +13,14 @@ namespace Game_RPG
 
 
 
+
+
+       
+
+ 
+
+
+
         static void Help()
         {
             Console.WriteLine("Following commands are available:");
@@ -29,8 +37,11 @@ namespace Game_RPG
 
         static public void Main()
         {
-            //Initialisation
             Character hero = new Character();
+
+
+            //Initialisation
+           
             
 
             Start:
@@ -113,6 +124,21 @@ namespace Game_RPG
 
 
             }
+//            //below is test
+//
+//            int i = 20;
+//            do
+//
+//            {
+//
+//                Random rnd = new Random();
+//                int Value = rnd.Next(1, hero.attack+1);
+//                Console.WriteLine(Value);
+//                Console.ReadLine();
+//            } while (i > 0);
+//
+//            // above is test
+
 
             hero.AnnounceAllStats();
             Console.WriteLine("Press any key to continue.");
@@ -168,18 +194,23 @@ namespace Game_RPG
                 }
             }
 
+            
+
 
             void Battle()
             {
+                
                 void CurrentHealth ()
                 {
                     Console.WriteLine(hero.name + "'s Health: " + hero.currentHealth + "/" + hero.maxHealth + "   |   " + mosquito.name + "'s Health: " + mosquito.currentHealth + "/" + mosquito.maxHealth);
                 }
-                void Attack()
+                void Attack(int dmg)
                 {
-                    Console.WriteLine(hero.name + " Dealt " + hero.attack + " damage to " + mosquito.name + ".");
+                    
+                    Console.WriteLine(hero.name + " Dealt " + dmg + " damage to " + mosquito.name + ".");
                 }
 
+                
 
 
 
@@ -187,16 +218,15 @@ namespace Game_RPG
                 while (mosquito.currentHealth > 0 && hero.currentHealth > 0)
                 {
                     Console.Clear();
-                    
-                    Attack();
-                    mosquito.currentHealth = mosquito.currentHealth - hero.attack;
+                    int damage = hero.AttackAction();
+                    mosquito.currentHealth = mosquito.currentHealth - damage;
+                    int newHealth = mosquito.currentHealth;
+                    Attack(damage);
                     CurrentHealth();
 
                     Console.WriteLine();
                     Console.WriteLine("Press any key to continue.");
                     Console.Read();
-                    
-
 
                 }
                 if (mosquito.currentHealth <= 0)
