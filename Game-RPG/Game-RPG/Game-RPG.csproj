@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hero.cs" />
-    <Compile Include="If.cs" />
+    <Compile Include="Character.cs" />
     <Compile Include="Inventory.cs" />
-    <Compile Include="Mosquito.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
