@@ -10,17 +10,7 @@ namespace Game_RPG
     class Program
 
     {
-
-
-
-
-
-       
-
- 
-
-
-
+        //Help() is not in use yet
         static void Help()
         {
             Console.WriteLine("Following commands are available:");
@@ -37,6 +27,14 @@ namespace Game_RPG
 
         static public void Main()
         {
+
+
+
+            List<string> Inventory = new List<string>();
+            Inventory.Add("HP Potion");
+            Inventory.ForEach(i => Console.WriteLine("{0}\t", i));
+
+
             Character hero = new Character();
 
 
@@ -93,52 +91,27 @@ namespace Game_RPG
                 hero.level = 1;
 
 
-                Inventory inv = new Inventory();
-                inv.smallPotions = 2;
+
 
 
             }
             else if (heroClassCheck == "RANGER")
             {
                 Console.WriteLine("Ranger - Stealthy and deadly!");
-                Thread.Sleep(1000);
-
-
                 hero.name = heroName;
                 hero.maxHealth = 5;
                 hero.currentHealth = 5;
                 hero.attack = 7;
                 hero.level = 1;
                 hero.exp = 1;
-
-
-
+                Thread.Sleep(1000);
             }
 
             else
             {
                 Console.WriteLine("Ups, that class was invalid.");
                 goto classSelect;
-
-
-
-
             }
-//            //below is test
-//
-//            int i = 20;
-//            do
-//
-//            {
-//
-//                Random rnd = new Random();
-//                int Value = rnd.Next(1, hero.attack+1);
-//                Console.WriteLine(Value);
-//                Console.ReadLine();
-//            } while (i > 0);
-//
-//            // above is test
-
 
             hero.AnnounceAllStats();
             Console.WriteLine("Press any key to continue.");
@@ -146,9 +119,9 @@ namespace Game_RPG
             Console.Clear();
 
             Console.WriteLine("You wake up, poor, broke, hungry, and you can hear someone calling your name, " + heroName + "...");
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Console.WriteLine("Before you can react, you are being attacked by a mosquito!");
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Character mosquito = new Character();
 
             mosquito.name = "George";
@@ -159,94 +132,12 @@ namespace Game_RPG
             mosquito.level = 1;
             mosquito.AnnounceAllStats();
 
+            FightOrFlight fightOne = new FightOrFlight();
+            fightOne.Fight(hero, mosquito);
 
-
-
-
-
-
-            FightOrFlight();
-
-
-            void FightOrFlight()
-            {
-                string fleeAttack;
-                FleeOrAttackOne:
-                Console.WriteLine("You need to make a choice: Flee or FIGHT?");
-                fleeAttack = Console.ReadLine().ToUpper();
-                Console.Clear();
-                if (fleeAttack == "FLEE")
-                {
-                    Console.WriteLine("You ran like a little.... Hero.");
-                }
-
-
-                else if (fleeAttack == "FIGHT")
-                {
-                    Console.WriteLine("Let the battle Begin!.. How excaiting...");
-                    Thread.Sleep(5000);
-                    
-                    Battle();
-                }
-                else
-                {
-                    goto FleeOrAttackOne;
-                }
-            }
-
-            
-
-
-            void Battle()
-            {
-                
-                void CurrentHealth ()
-                {
-                    Console.WriteLine(hero.name + "'s Health: " + hero.currentHealth + "/" + hero.maxHealth + "   |   " + mosquito.name + "'s Health: " + mosquito.currentHealth + "/" + mosquito.maxHealth);
-                }
-                void Attack(int dmg)
-                {
-                    
-                    Console.WriteLine(hero.name + " Dealt " + dmg + " damage to " + mosquito.name + ".");
-                }
-
-                
-
-
-
-
-                while (mosquito.currentHealth > 0 && hero.currentHealth > 0)
-                {
-                    Console.Clear();
-                    int damage = hero.AttackAction();
-                    mosquito.currentHealth = mosquito.currentHealth - damage;
-                    int newHealth = mosquito.currentHealth;
-                    Attack(damage);
-                    CurrentHealth();
-
-                    Console.WriteLine();
-                    Console.WriteLine("Press any key to continue.");
-                    Console.Read();
-
-                }
-                if (mosquito.currentHealth <= 0)
-                {
-                    Console.WriteLine("Right on! You are Victorious!!!");
-                }
-                else if (hero.currentHealth <= 0)
-                {
-                    Console.WriteLine("Oh no.. you are dead...");
-                }
-                else
-                {
-                    Console.WriteLine("You reached the end.");
-                }
-            }
-                
-
-         Console.Read();
-
-            
-        }
+            //End of program
+            Console.WriteLine("You reached the end.");
+            Console.Read();
+        }              
     }
 }

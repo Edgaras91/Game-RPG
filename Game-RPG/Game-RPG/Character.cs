@@ -20,9 +20,7 @@ namespace Game_RPG
 
         public int AttackAction()
         {
-
             Random rnd = new Random();
-
             int Dice = rnd.Next(0, attack);
             return Dice;
         }
@@ -37,14 +35,14 @@ namespace Game_RPG
             Thread.Sleep(1000);
             Console.WriteLine("Name: " + name);
             Thread.Sleep(500);
+            Console.WriteLine("Attack: " + attack);          
+            Thread.Sleep(500);
+            Console.WriteLine("Health: " + currentHealth + "/" + maxHealth);          
+            Thread.Sleep(500);
+            Thread.Sleep(500);
             Console.WriteLine("Level: " + level);
             Thread.Sleep(500);
             Console.WriteLine("Experience: " + exp);
-            Thread.Sleep(500);
-            Console.WriteLine("Health: " + currentHealth + "/" + maxHealth);
-            Thread.Sleep(500);
-            Console.WriteLine("Attack: " + attack);
-            Thread.Sleep(500);
             Console.WriteLine();
             
 

@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace Game_RPG
 {
-    public class Inventory
+    class Inventory
     {
 
-        public int smallPotions;
+
+
+
 
 
     }
-    
-        
-       
-
-
-
-    
 }
