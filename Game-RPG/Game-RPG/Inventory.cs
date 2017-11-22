@@ -10,6 +10,13 @@ namespace Game_RPG
     {
 
 
+        public List<string> inv = new List<string>();
+
+        public void WriteOut()
+        {
+            //Inventory.Add("HP Potion");
+            inv.ForEach(i => Console.WriteLine("{0}\t", i));
+        }
 
 
 

@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace Game_RPG
 {
-    class FightOrFlight
+    class FightOrFlight : Inventory
     {
         public void Fight(Character charOne, Character charTwo)
         {
             
             string fleeAttack;
             FleeOrAttackOne:
+            Console.WriteLine("Your inventory contains:");
+            WriteOut();
             Console.WriteLine("You need to make a choice: Flee or Fight?");
             fleeAttack = Console.ReadLine().ToUpper();
             Console.Clear();

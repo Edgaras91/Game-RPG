@@ -39,7 +39,6 @@ namespace Game_RPG
             Thread.Sleep(500);
             Console.WriteLine("Health: " + currentHealth + "/" + maxHealth);          
             Thread.Sleep(500);
-            Thread.Sleep(500);
             Console.WriteLine("Level: " + level);
             Thread.Sleep(500);
             Console.WriteLine("Experience: " + exp);

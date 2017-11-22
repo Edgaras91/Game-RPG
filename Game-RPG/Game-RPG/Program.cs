@@ -25,26 +25,24 @@ namespace Game_RPG
             Console.Clear();
         }
 
+
+
+
         static public void Main()
         {
-
-
-
-            List<string> Inventory = new List<string>();
-            Inventory.Add("HP Potion");
-            Inventory.ForEach(i => Console.WriteLine("{0}\t", i));
-
-
+            //Initialisation Start
+            Inventory inv = new Inventory();
             Character hero = new Character();
+            //Initialisation End
+            inv.inv.Add("HP Potion");
+            inv.WriteOut();
 
-
-            //Initialisation
-           
-            
 
             Start:
             Console.WriteLine("Welcome, please type in your hero name:");
             string heroName = Console.ReadLine();
+            if (string.IsNullOrEmpty(heroName)) { goto Start; }
+            heroName = heroName.First().ToString().ToUpper() + heroName.Substring(1).ToString().ToLower();
             Console.WriteLine("Are you sure?");
             string confirm = Console.ReadLine().ToUpper();
             if (confirm == "NO")
@@ -89,6 +87,8 @@ namespace Game_RPG
                 hero.attack = 2;
                 hero.exp = 1;
                 hero.level = 1;
+                inv.inv.Add("Hp Potion");
+                
 
 
 
@@ -104,7 +104,9 @@ namespace Game_RPG
                 hero.attack = 7;
                 hero.level = 1;
                 hero.exp = 1;
-                Thread.Sleep(1000);
+                inv.inv.Add("Hp Potion");
+                inv.inv.Add("Hp Potion");
+
             }
 
             else
