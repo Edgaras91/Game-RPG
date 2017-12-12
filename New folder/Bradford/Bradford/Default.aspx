@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
 <head runat="server">
     <title></title>
 </head>
@@ -28,15 +31,6 @@
             <br />
 
             <asp:Label ID="CheckBoxLabel" runat="server" Text=""></asp:Label>
-
-
-           
-
-
-
-
-
-
 
 
 
