@@ -19,7 +19,7 @@ namespace Bradford
             if (Conversion1 && Conversion2)
             {
                 int sum = num1 * num2 * num1;
-                CheckBoxLabel.Text = sum.ToString();
+                CheckBoxLabel.Text = "Your score is: "+sum.ToString();
             }
             else
             {
@@ -35,7 +35,7 @@ namespace Bradford
 
             //comment
 
-            footerLabel.Text = "Current date and time is: " + DateTime.Now.ToString();
+            footerLabel.Text = "Last time page updatted: " + DateTime.Now.ToString();
         }
     }
 }
