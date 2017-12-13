@@ -9,7 +9,7 @@
 
 <head runat="server">
     <title>Bradford Index Calculator</title>
-    <style>
+<style>
 * {
     box-sizing: border-box;
 }
@@ -20,9 +20,7 @@
         background-image: url('http://valius.co.uk/img/Absence.jpg'); 
         background-repeat: repeat-x;  
         background-attachment: fixed;
-    background-position:  50% 397px; 
-
-
+    background-position:  50% 400px; 
     }
 
 /* Create two equal columns that floats next to each other */
@@ -42,10 +40,10 @@
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
+@media (max-width: 800px) {
+    .column {width: 100%;}
+    body{background-position:  50% 700px; }
+
 }
 
 </style>
@@ -53,7 +51,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <h2><center>Bradford Factor</center></h2>
+        <h1><center><b>Bradford Factor</b></center></h1>
 
         <div class="row">
   <div class="column" style="background-color:#c6e3ff;">
@@ -61,10 +59,10 @@
     <p>The Bradford Factor or Bradford Formula is used in human resource management as a means of measuring worker absenteeism. The theory is that short, frequent, and unplanned absences are more disruptive than longer absences.
         <br />
         <br />
-        Score meaning:
-<br />        Score 45: Sufficient days for a manager to show concern and advise on possible disciplinary of financial actions, should more absences occur during an identified period.
-<br />Score 100: Sufficient days for a manager to start disciplinary action (oral warning, written warning, formal monitoring etc)
-<br />Score 900: Sufficient days for a manager to consider dismissal
+        <u>Suggested Score meaning:</u>
+<br />Score 45: A manager to show concern and advise on possible disciplinary.
+<br />Score 100: A manager to start disciplinary action
+<br />Score 900: A manager to consider dismissal
     </p>
         <p>         
           <asp:Label ID="footerLabel" runat="server" />

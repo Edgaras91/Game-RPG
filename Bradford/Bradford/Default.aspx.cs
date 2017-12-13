@@ -27,15 +27,9 @@ namespace Bradford
             }
         }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-
-
-
-            //comment
-
-            footerLabel.Text = "Last time page updatted: " + DateTime.Now.ToString();
-        }
+        //protected void Page_Load(object sender, EventArgs e)
+        // {
+            //footerLabel.Text = "Last time page updatted: " + DateTime.Now.ToString();
+        // }
     }
 }
