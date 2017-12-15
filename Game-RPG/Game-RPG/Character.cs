@@ -42,8 +42,10 @@ namespace Game_RPG
             Console.WriteLine("Level: " + level);
             Thread.Sleep(500);
             Console.WriteLine("Experience: " + exp);
+            Thread.Sleep(500);
             Console.WriteLine();
             
+
 
 
         }

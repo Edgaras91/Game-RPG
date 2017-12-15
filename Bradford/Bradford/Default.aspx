@@ -15,6 +15,7 @@
 }
 
     body {
+        font-family: "Trebuchet MS";
         margin: 50px 0px 50px 0px; 
         background: lightblue;
         background-image: url('http://valius.co.uk/img/Absence.jpg'); 
@@ -40,7 +41,7 @@
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .column {width: 100%;}
     body{background-position:  50% 700px; }
 
@@ -60,10 +61,11 @@
         <br />
         <br />
         <u>Suggested Score meaning:</u>
-<br />Score 45: A manager to show concern and advise on possible disciplinary.
-<br />Score 100: A manager to start disciplinary action
-<br />Score 900: A manager to consider dismissal
+<br />Score 45: A manager to show concern and investigate the situation
+<br />Score 100: A manager to consider disciplinary action
+<br />Score 900: A manager to escalate disciplinary action, including possible dismissal
     </p>
+      <p>For more info on Bradford Factor see <a href="https://en.wikipedia.org/wiki/Bradford_Factor">this link</a>.</p>
         <p>         
           <asp:Label ID="footerLabel" runat="server" />
      </p>
