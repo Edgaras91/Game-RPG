@@ -19,11 +19,11 @@ namespace Bradford
             if (Conversion1 && Conversion2)
             {
                 int sum = num1 * num2 * num1;
-                CheckBoxLabel.Text = "Your score is: "+sum.ToString();
+                ResultLabel.Text = "Your score is: "+sum.ToString();
             }
             else
             {
-                CheckBoxLabel.Text = "Please enter numbers in both boxes above";
+                ResultLabel.Text = "Please enter numbers in both boxes above";
             }
         }
 
