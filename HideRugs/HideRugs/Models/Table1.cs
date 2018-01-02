@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GOTdb.Models
+namespace HideRugs.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Character
+    public partial class Table1
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string House { get; set; }
-        public string ActorName { get; set; }
+        public int ID { get; set; }
+        public string Animal { get; set; }
+        public string Type { get; set; }
+        public string Colour { get; set; }
+        public string Size { get; set; }
+        public string ProductID { get; set; }
     }
 }
