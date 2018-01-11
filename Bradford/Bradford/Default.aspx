@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>   
+    <%--CSS style sheet--%>
     <link href="Content/StyleSheet.css" rel="stylesheet" />
     <title>Bradford Factor Calculator</title>
 </head>
 <body>
-    
 
 <h1><b>Bradford Factor</b></h1>
 <%--Left column--%>
