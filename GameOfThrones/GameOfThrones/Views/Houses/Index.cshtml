@@ -1,0 +1,25 @@
+﻿@model IEnumerable<GameOfThrones.Models.House>
+
+@{
+    ViewBag.Title = "Houses";
+}
+
+<p style="padding-left:10px">
+
+    <button  class="btn btn-default" onclick="location.href='@Url.Action("Create")';">Create New</button>
+
+</p>
+<div class="grid">
+    @foreach (var item in Model)
+    {
+        <div class="grid-item" style="width:16.66%; float:left; ">
+            <a href="@Url.Action("Details", new { id = item.Id })">
+                <img src="@Url.Content(item.Flag)" style="width:100%; " />
+                <div class="grid-inner">
+                    <div class="grid-inner-text">@Html.DisplayFor(modelItem => item.Name)</div>
+
+                </div>
+            </a>
+        </div>
+    }
+</div>  

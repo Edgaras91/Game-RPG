@@ -1,0 +1,85 @@
+﻿@model IEnumerable<HideRugs.Models.Table_1>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<img class="titleimage" src="~/Content/Images/Index-Image.jpg"/>
+<h2 class="indextitle">Hide Rugs Products</h2>
+<h4>This is a product inventory list for business employee use, to check product details and manage their stock.</h4>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th class="text-center">
+            
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Hide)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Colour)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th nowrap class="text-center">
+        Product ID
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td class="text-center">
+            <a href="@Url.Action("Details", new { id=item.ID })">
+                <img src="@Url.Content(item.Image)" height="100" width="100" />
+            </a>
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Hide)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Colour)
+        </td>
+        <td class="text-center">
+            £@Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td class="text-center">
+            @Html.DisplayFor(modelItem => item.ProductID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

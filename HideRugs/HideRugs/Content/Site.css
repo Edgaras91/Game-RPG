@@ -1,0 +1,48 @@
+﻿body {
+    /* For navbar uncomment below */
+    /*padding-top: 50px;*/
+     padding-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'EuphoriaScript-Regular';
+    src: url('Fonts/EuphoriaScript-Regular.ttf') format('truetype'), url('Fonts/euphoriascript-regular-webfont.ttf') format('truetype'), url('Fonts/euphoriascript-regular-webfont.woff') format('woff'), url('Fonts/euphoriascript-regular-webfont.woff2') format('woff2');
+}
+
+.detail-image {
+float:left;
+width:400px;
+height:400px;
+position:absolute;
+}
+
+.titleimage {
+    position:relative;
+    width: 100%;
+    z-index: 0;
+}
+
+
+.indextitle {
+    font-family: 'EuphoriaScript-Regular';
+    font-size:60px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

@@ -1,0 +1,59 @@
+﻿body, h1, h2, h3, h4, h5 {
+    font-family: "Times New Roman", sans-serif;
+    color: white;
+}
+
+body {
+    font-size: 16px;
+    background-color: #262930;
+}
+
+.w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+   
+    
+        
+}
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+@font-face {
+    font-family: 'game_of_thrones-webfont';
+    src: url('Fonts/game_of_thrones-webfont.woff2') format('woff2'), url('Fonts/game_of_thrones-webfont.ttf') format('truetype'), url('Fonts/game_of_thrones-webfont.woff') format('woff');
+}
+.grid {
+    grid-area: auto;
+    width: 100%;
+    position: relative;
+}
+.grid-inner {
+    color: white;
+    font-size: 16px;
+    padding: 10px 10px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: static;
+    display: inline-block;
+    /*border:2px solid grey;*/
+}
+.menu-title {
+    font-family: 'game_of_thrones-webfont';
+}
+
+.grid-item:nth-child(odd) {
+    background-color: #212121;
+}
+
+.grid-item:nth-child(even) {
+    background-color: #151515;
+}
+
+
+.grid-inner-text {
+    float: left;
+   
+}
+

@@ -1,0 +1,90 @@
+﻿@model GameOfThrones.Models.Character
+
+@{
+    ViewBag.Title = "Details";
+}
+<p style="padding-left:10px">
+
+    <button class="btn btn-default" onclick="location.href='@Url.Action("Edit", new { id = Model.Id })';">Edit</button>
+    <button class="btn btn-default" onclick="location.href='@Url.Action("Index")';">Back to List</button>
+    <button class="btn btn-default" onclick="location.href='@Url.Action("Delete", new { id = Model.Id })';">Delete</button>
+</p>
+<hr />
+<div class="w3-half w3-row-padding">
+
+    <a href=@("http://gameofthrones.wikia.com/wiki/"+Model.Name)>
+        <img src="@Url.Content(Model.Image)" style="width:100%" />
+    </a>
+</div>
+
+<div class="w3-half w3-row-padding">
+
+    <a href=@("http://gameofthrones.wikia.com/wiki/House_"+Model.House.Name)>
+        <img src="@Url.Content(Model.House.Flag)" style="width:50%" />
+    </a>
+</div>
+
+
+
+<dl class="dl-horizontal">
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Titles)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Titles)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Origin)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Origin)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Status)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Status)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Death)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Death)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Actor)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Actor)
+    </dd>
+
+    <dt>
+        House
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.House.Name)
+    </dd>
+
+</dl>
+
+
+

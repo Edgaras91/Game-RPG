@@ -1,0 +1,40 @@
+﻿@model GameOfThrones.Models.House
+
+@{
+    ViewBag.Title = "Details";
+}
+<p style="padding-left:10px">
+
+    <button class="btn btn-default" onclick="location.href='@Url.Action("Edit", new { id = Model.Id })';">Edit</button>
+    <button class="btn btn-default" onclick="location.href='@Url.Action("Index")';">Back to List</button>
+    <button class="btn btn-default" onclick="location.href='@Url.Action("Delete", new { id = Model.Id })';">Delete</button>
+</p>
+
+<div style="width:50%">
+    <a href=@("http://gameofthrones.wikia.com/wiki/House_"+Model.Name)>
+        <img src="@Url.Content(Model.Flag)" />
+    </a>
+</div>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flag)
+        </dd>
+
+    </dl>
+</div>
+
