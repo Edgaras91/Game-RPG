@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Valius.co.uk", "Valius.co.uk\", "{879717DB-D227-4540-8ACC-1991FE8951E5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52843"
+		Debug.AspNetCompiler.PhysicalPath = "Valius.co.uk\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52843\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52843"
+		Release.AspNetCompiler.PhysicalPath = "Valius.co.uk\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52843\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52843"
+		SlnRelativePath = "Valius.co.uk\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{879717DB-D227-4540-8ACC-1991FE8951E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879717DB-D227-4540-8ACC-1991FE8951E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {815B86AB-B444-4449-A5DE-2304FA99EB5A}
+	EndGlobalSection
+EndGlobal
