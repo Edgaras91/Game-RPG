@@ -30,6 +30,7 @@ body {
     position: relative;
 }
 .grid-inner {
+    width:100%;
     color: white;
     font-size: 16px;
     padding: 10px 10px 8px;
